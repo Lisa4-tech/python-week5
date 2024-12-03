@@ -1,0 +1,33 @@
+# Base class
+class Entity:
+    def move(self):
+        pass
+
+# Animal classes
+class Dog(Entity):
+    def move(self):
+        print("Running")
+
+class Bird(Entity):
+    def move(self):
+        print("Flying")
+
+# Vehicle classes
+class Car(Entity):
+    def move(self):
+        print("Driving")
+
+class Plane(Entity):
+    def move(self):
+        print("Flying")
+
+# Creating instances of each class
+dog = Dog()
+bird = Bird()
+car = Car()
+plane = Plane()
+
+# Calling the move method on each instance
+entities = [dog, bird, car, plane]
+for entity in entities:
+    entity.move()

@@ -1,0 +1,37 @@
+# Base class
+class SpiritualEntity:
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Power: {self.power}")
+
+# Derived class
+class Medusa(SpiritualEntity):
+    def __init__(self, name, power, domain, symbol, hair_type, gaze_power):
+        super().__init__(name, power)
+        self.domain = domain
+        self.symbol = symbol
+        self.hair_type = hair_type
+        self.gaze_power = gaze_power
+
+    def display_info(self):
+        super().display_info()
+        print(f"Domain: {self.domain}")
+        print(f"Symbol: {self.symbol}")
+        print(f"Hair Type: {self.hair_type}")
+        print(f"Gaze Power: {self.gaze_power}")
+
+    def petrify(self):
+        print(f"{self.name} uses her {self.gaze_power} to turn enemies to stone!")
+
+# Creating an instance of the Medusa class
+medusa = Medusa("Medusa", "Petrification", "Gorgons", "Snake", "Snakes", "Petrifying Gaze")
+
+# Displaying information about Medusa
+medusa.display_info()
+
+# Invoking the petrify method
+medusa.petrify()
